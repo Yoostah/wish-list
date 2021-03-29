@@ -1,22 +1,16 @@
 export const colors = {
-    'light-green': '#bdede0ff',
-    'green': '#bbdbd1ff',
-    'gray': '#b6b8d6ff',
-    'light-blue': '#7e78d2ff',
-    'blue': '#6f58c9ff',
-    progress: {
-        initial: 'red',
-        low: 'yellow',
-        high: 'greenyellow',
-        final: 'lime',
-    }
-}
-
-
-
-
-
-
+  "light-green": "#bdede0ff",
+  green: "#bbdbd1ff",
+  gray: "#b6b8d6ff",
+  "light-blue": "#7e78d2ff",
+  blue: "#6f58c9ff",
+  progress: {
+    initial: "red",
+    low: "yellow",
+    high: "greenyellow",
+    final: "lime",
+  },
+};
 
 /* SCSS Gradient */
 // $gradient-top: linear-gradient(0deg, #bdede0ff, #bbdbd1ff, #b6b8d6ff, #7e78d2ff, #6f58c9ff);

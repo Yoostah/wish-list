@@ -4,13 +4,14 @@ import { colors } from "../../assets/colors";
 const progressColor = (progress) => {
   if (progress < 20) {
     return colors.progress.initial;
-  } else if (progress < 70) {
-    return colors.progress.low;
-  } else if (progress < 100) {
-    return colors.progress.high;
-  } else {
-    return colors.progress.final;
   }
+  if (progress < 70) {
+    return colors.progress.low;
+  }
+  if (progress < 100) {
+    return colors.progress.high;
+  }
+  return colors.progress.final;
 };
 
 const fillProgress = (progress) => keyframes`
@@ -25,6 +26,36 @@ const fillProgress = (progress) => keyframes`
     }
 `;
 
+export const Container = styled.div`
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 10px;
+
+  div {
+    flex: 1;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    > strong {
+      font-size: 10px;
+      margin-right: 10px;
+    }
+
+    span {
+      color: orange;
+      font-size: 10px;
+      background-color: black;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+  }
+
+  svg {
+    color: green;
+  }
+`;
 export const WishContainer = styled.li`
   display: flex;
   flex-direction: column;
@@ -41,37 +72,6 @@ export const WishContainer = styled.li`
 
   > strong {
     font-size: 16px;
-  }
-
-  p {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-top: auto;
-    padding-top: 10px;
-
-    div {
-      flex: 1;
-      align-items: flex-end;
-      justify-content: space-between;
-
-      > strong {
-        font-size: 10px;
-        margin-right: 10px;
-      }
-
-      span {
-        color: orange;
-        font-size: 10px;
-        background-color: black;
-        padding: 2px 4px;
-        border-radius: 3px;
-      }
-    }
-
-    svg {
-      color: green;
-    }
   }
 `;
 
